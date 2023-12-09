@@ -1,1 +1,1 @@
-console.log("grill"),alert("boy");
+(()=>{const e=document.getElementById("content");let n=0;function t(e){const t=document.createElement("button");t.className="tabButton",t.innerText=e,n++;const o=n-1;return t.addEventListener("click",(()=>{console.log(o)})),t}e.appendChild(t("Home")),e.appendChild(t("Menu")),e.appendChild(t("Contact"))})();
