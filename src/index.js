@@ -6,6 +6,16 @@ function updateMainContent(tab_index) {
         main.firstChild.remove()
     }
 
+    let i = 0;
+    for (var child = tabs.firstChild; child !== null; child = child.nextSibling) {
+        console.log(child);
+        child.className = "tabButton";
+        if (i == tab_index) {
+            child.className += " selected";
+        }
+        i++;
+    }
+
     const title = document.createElement("h2");
     const info_container = document.createElement("div");
 
