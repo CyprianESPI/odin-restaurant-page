@@ -1,5 +1,10 @@
 const content = document.getElementById("content");
 
+/* Header */
+const header = document.createElement("h1");
+header.innerText = "Restaurant Page";
+content.appendChild(header);
+
 let TabIndex = 0;
 let Tabs = 0;
 
@@ -28,6 +33,7 @@ content.appendChild(tabs);
 const main = document.createElement("main");
 content.appendChild(main);
 
+/* Footer */
 const footer = document.createElement("h2");
 const footer_link = document.createElement("a");
 footer_link.href = "https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page";
