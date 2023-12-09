@@ -7,16 +7,26 @@ function updateMainContent(tab_index) {
     }
 
     const title = document.createElement("h2");
+    const info_container = document.createElement("div");
 
     switch (tab_index) {
         case 0:
             title.innerText = "Home";
+            const greeting = document.createElement("p");
+            greeting.innerText = "Welcome!";
+            info_container.appendChild(greeting);
             break;
         case 1:
             title.innerText = "Menu";
+            const food = document.createElement("p");
+            food.innerText = "Burger";
+            info_container.appendChild(food);
             break;
         case 2:
             title.innerText = "Contact";
+            const phone_number = document.createElement("p");
+            phone_number.innerText = "Phone: 123 456 789";
+            info_container.appendChild(phone_number);
             break;
         default:
             console.log("Unhandled tab_index", tab_index);
@@ -24,6 +34,7 @@ function updateMainContent(tab_index) {
     }
 
     main.appendChild(title);
+    main.appendChild(info_container);
 }
 
 /* Header */
