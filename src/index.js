@@ -1,5 +1,31 @@
 const content = document.getElementById("content");
 
+function updateMainContent(tab_index) {
+    // Remove previous content
+    while (main.firstChild) {
+        main.firstChild.remove()
+    }
+
+    const title = document.createElement("h2");
+
+    switch (tab_index) {
+        case 0:
+            title.innerText = "Home";
+            break;
+        case 1:
+            title.innerText = "Menu";
+            break;
+        case 2:
+            title.innerText = "Contact";
+            break;
+        default:
+            console.log("Unhandled tab_index", tab_index);
+            break;
+    }
+
+    main.appendChild(title);
+}
+
 /* Header */
 const header = document.createElement("h1");
 header.innerText = "Restaurant Page";
@@ -18,7 +44,7 @@ function CreateTabButton(name) {
     const tab_index = Tabs - 1;
     elem.addEventListener("click", () => {
         console.log(tab_index, name);
-        main.innerText = name;
+        updateMainContent(tab_index);
     });
 
     return elem;
@@ -40,3 +66,6 @@ footer_link.href = "https://www.theodinproject.com/lessons/node-path-javascript-
 footer_link.innerText = "The Odin Project | Project: Restaurant Page";
 footer.appendChild(footer_link);
 content.appendChild(footer);
+
+/* Select Home tab */
+updateMainContent(0);
