@@ -1,3 +1,3 @@
-console.log("hello");
+console.log("grill");
 
-alert("world");
+alert("boy");
